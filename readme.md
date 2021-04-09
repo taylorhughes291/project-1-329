@@ -45,13 +45,15 @@ Definition of success: Those who look at my website have an immediate impression
 
 ## Portfolio I want to Emulate
 
-Search and compare at least 3 profile web sites.  Record your findings in the table below and include some aspect of the site that you would like to incorporate into your own site.
+Below is a list of a few portfolios that caught my eye that I plan on using for style inspiration:
 
 Link To Site  | One Thing I'd Like To Incorporate | 
 | ------------- | ------------- |
 | [Google slides pastel portfolio template](https://slidesgo.com/theme/pastel-portfolio)| Not a site, but a similar style feel that I really like.
-|[jkeohan.com](http://jkeohan.com/) | mouseover on a project triggers animations |
-| [mattfarley.ca](http://mattfarley.ca/) |  layout of the projects
+|[Ink Elegant Magazine Blog Template](https://themeforest.net/item/ink-elegant-magazine-blog-psd-template/12135937) | I love these colors, font, simplicity, and the use of artwork |
+| [http://www.mypoorbrain.com/](http://www.mypoorbrain.com/) |  This card layout is close to exactly what I'm looking for
+|[https://www.polarsundesigns.com/store](https://www.polarsundesigns.com/store)| I probably won't actually implement any of this, I just thought it was dope.
+
 
 ---
 
@@ -81,19 +83,22 @@ Now create a separate list starting with A and assign it one of the features.  C
 Once complete tally up the time and determine how long the project will take to complete. Now break those features into MVP and PostMVP so you can guarantee you will have a fully functioning project to demo. 
 
 ### MVP/PostMVP - 5min
+MVP
+* Use semantic markup for HTML and CSS, adhering to best practices.
+* Use CSS GRID to create a multi-column layout
+* Use Flexbox for content
+* Must be mobile mobile first, then tablet and desktop responsive
+* Must pull in projects via API call from google sheet
+* Be deployed and accessible online either via Github Pages or Surge.
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+Post-MVP
+* Add secondary more detailed project information to your google sheet and your render
+* Add a sort field to your google sheet and your render
+* Add an optional photography section
+	* Make a new photography CMS
+	* Render photography elements on the page
+* Add a personality section, whether that be for outdoors trips, personal goals in progress, books you're reading, something to show off who you actually are
 
-#### MVP (examples)
-
-- Pull data using google json api
-- Render data on page 
-- Allow user to choose favorites 
-- Save their choices in firebase
-
-#### PostMVP 
-
-- Anything else that is not MVP
 
 ## Functional Components
 
@@ -126,7 +131,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Total | H | 20hrs| hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+JQuery - used to more easily manipulate the DOM
+Bootstrap - Used to more easily create styled HTML elements
 
 ## Code Snippet
 
