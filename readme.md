@@ -1,8 +1,8 @@
 # Project Overview
 
-**PROJECT NAME:** dfadfadfsdfadf
+**PROJECT NAME:** Taylor Hughes - Portfolio Project
 
-**PROJECT AUTHOR:** lkjlkjljlkadfsd
+**PROJECT AUTHOR:** Taylor Hughes
 
 ## Project Schedule
 
@@ -12,21 +12,36 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Project Description | Incomplete
-|Day 1| Wireframes / Priority Matrix / Timeline | Incomplete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| MVP & Bug Fixes | Incomplete
-|Day 5| Final Touches | Incomplete
-|Day 6| Present | Incomplete
+|Weekend| Project Description | Incomplete
+|Monday - 3 hours| Mobile Wireframes | Incomplete
+|Monday - 1 hour| Priority Matrix
+|Monday - 1 hour| Timeline | Incomplete
+|Monday - 2 hour| Desktop Wireframes / Priority Matrix / Timeline | Incomplete
+|Monday - 2 hours| HTML Structure for mobile | Incomplete
+|Tuesday - 2 hours| Creation of custom HTML card classes and components | Incomplete
+|Tuesday - 3 hours| CSS/Bootstrap layout for mobile | Incomplete
+|Tuesday - 2 hours| CSS/Bootstrap layout for desktop | Incomplete
+|Tuesday - 2 hours| Additional CSS embellishments | Incomplete
+|Wednesday - 3 hours| Render Primary project information via JS | Incomplete
+|Wednesday - 1 hour| Enable a sort functionality on projects | Incomplete
+|Wednesday - 2 hours| Enable Secondary display functionality to page | Incomplete 
+|Wednesday - 2 hours| Final Touches | Incomplete
+|Thursday - 1 hour| Add Secondary project information | Incomplete
+|Thursday - 3 hours| Add animations | Incomplete
+|Thursday - 2 hours| Determine if project meets definition of success | Incomplete
+|Thursday - 2 hours| Unplanned changes/work | Incomplete
+|Friday| Present | Incomplete
 
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+By the end of this project, I will have developed a full informative webpage showcasing the projects that I have participated in. The target audience will be potential employers, peers who wish to see my work and possibly collaborate, and those who may just be curious to see what I've worked on.
+
+Definition of success: Those who look at my website have an immediate impression of my skills and skill level, are easily and directly able to see my projects and get an immediate understanding of what they are at a glance. Users will be able to dig deeper, only if they want to, to gain more details about what went into each project and more specific components that were leveraged to make the finished products.
 
 ## Google Sheet
 
-Include link to your google sheet here.  Here is the sample [Joe had used in class](https://docs.google.com/spreadsheets/d/15PmioBi2dQEkewpqI7MDkDpvcVF0Trw8vmarAQbwoHk/edit#gid=0) 
+[Here](https://docs.google.com/spreadsheets/d/1oVPq9iIy7lclUAgZLIBaJSXGHU4IIpGdERTxXm4l7vk/edit#gid=0)  is a link to my google sheet used as the CMS for the project 
 
 ## Portfolio I want to Emulate
 
@@ -34,7 +49,7 @@ Search and compare at least 3 profile web sites.  Record your findings in the ta
 
 Link To Site  | One Thing I'd Like To Incorporate | 
 | ------------- | ------------- |
-| [denisechandler.com](http://www.denisechandler.com/)| landing page animation
+| [Google slides pastel portfolio template](https://slidesgo.com/theme/pastel-portfolio)| Not a site, but a similar style feel that I really like.
 |[jkeohan.com](http://jkeohan.com/) | mouseover on a project triggers animations |
 | [mattfarley.ca](http://mattfarley.ca/) |  layout of the projects
 
