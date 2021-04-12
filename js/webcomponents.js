@@ -9,14 +9,14 @@ class ProjectCard extends HTMLElement {
         super()
 
         this.innerHTML = `<div class="card" style="width: 18rem;">
-        <img src="https://placeimg.com/275/275/any" class="card-img-top" alt="project screenshot">
+        <img src="${this.getAttribute("image")}" class="card-img-top" alt="project screenshot">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">${this.getAttribute("project")}</h5>
+          <p class="card-text">${this.getAttribute("description")}</p>
         </div>
         <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <a href="${this.getAttribute("liveurl")}" class="card-link">Go To Site</a>
+          <a href="${this.getAttribute("giturl")}" class="card-link">Github Link</a>
         </div>
       </div>`
     }

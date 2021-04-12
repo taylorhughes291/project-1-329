@@ -17,11 +17,19 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
         }
     })
 
-    console.log(projects);
+    console.log(projects[0]);
 
     /////////////////////////////////////
     // JQUERY to render projects
     /////////////////////////////////////
+
+    projects.forEach((item, index) => {
+        const $projectContainer = $('div.projects')
+        $projectContainer.html(`
+            <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+        `)
+    })
+
 })
 .catch((error) => {
     console.log(error);

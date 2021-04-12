@@ -18,7 +18,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Monday - 1 hour| Timeline | Complete - 1hr
 |Monday - 2 hour| Desktop Wireframes / Priority Matrix / Timeline | Complete - 1 hr
 |Monday - 2 hours| HTML Structure for mobile | Complete - 2 hrs
-|Tuesday - 2 hours| Creation of custom HTML card classes and components | Incomplete
+|Tuesday - 2 hours| Creation of custom HTML card classes and components | Complete - 2 hrs
 |Tuesday - 3 hours| CSS/Bootstrap layout for mobile | Incomplete
 |Tuesday - 2 hours| CSS/Bootstrap layout for desktop | Incomplete
 |Tuesday - 2 hours| Additional CSS embellishments | Incomplete
