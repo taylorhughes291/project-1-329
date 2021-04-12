@@ -13,10 +13,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |  Day | Deliverable | Status
 |---|---| ---|
 |Weekend - 3 hours| Project Description | Complete - 3 hr
-|Monday - 3 hours| Mobile Wireframes | Incomplete
+|Monday - 3 hours| Mobile Wireframes | Complete - 2 hrs
 |Monday - 1 hour| Priority Matrix | Complete - 1 hr
 |Monday - 1 hour| Timeline | Complete - 1hr
-|Monday - 2 hour| Desktop Wireframes / Priority Matrix / Timeline | Incomplete
+|Monday - 2 hour| Desktop Wireframes / Priority Matrix / Timeline | Complete - 1 hr
 |Monday - 2 hours| HTML Structure for mobile | Incomplete
 |Tuesday - 2 hours| Creation of custom HTML card classes and components | Incomplete
 |Tuesday - 3 hours| CSS/Bootstrap layout for mobile | Incomplete
@@ -61,8 +61,8 @@ Link To Site  | One Thing I'd Like To Incorporate |
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Do not include the actual image and have it render on the page.  
 
-- [Mobile](https://i.imgur.com/P3iBEZf.jpg)
-- [Desktop](https://i.imgur.com/xpOWo0E.jpg)
+- [Mobile](https://i.imgur.com/xtwY76v.jpg)
+- [Desktop](https://imgur.com/a/trlENPx)
 
 Wireframing Resources:
 
