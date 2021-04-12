@@ -11,6 +11,11 @@ header nav div#personal-brand, header nav ul {
     margin: 10px !important;
 }
 
+header .title {
+    display: none;
+    font-size: 30px;
+}
+
 header nav ul {
     display: flex;
     flex-direction: column;
@@ -100,4 +105,37 @@ footer div img {
 footer p {
     display: inline;
     padding-left: 15px;
+}
+
+
+/* MEDIA QUERY FOR TABLET */
+
+@media screen and (min-width: 768px) {
+    header nav ul {
+        flex-direction: row;
+        width: 250px;
+        justify-content: space-between;
+    }
+
+    header .title {
+        display: inline;
+    }
+
+    header nav div#personal-brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+    }
+
+    div.inputs {
+        width: 650px;
+    }
+
+    div.contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
