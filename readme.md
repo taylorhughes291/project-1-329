@@ -12,10 +12,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Weekend| Project Description | Incomplete
+|Weekend - 3 hours| Project Description | Complete - 3 hr
 |Monday - 3 hours| Mobile Wireframes | Incomplete
-|Monday - 1 hour| Priority Matrix
-|Monday - 1 hour| Timeline | Incomplete
+|Monday - 1 hour| Priority Matrix | Complete - 1 hr
+|Monday - 1 hour| Timeline | Complete - 1hr
 |Monday - 2 hour| Desktop Wireframes / Priority Matrix / Timeline | Incomplete
 |Monday - 2 hours| HTML Structure for mobile | Incomplete
 |Tuesday - 2 hours| Creation of custom HTML card classes and components | Incomplete
@@ -72,13 +72,9 @@ Wireframing Resources:
 
 ## Time/Priority Matrix 
 
-[Link](https://res.cloudinary.com/jkeohan/image/upload/a_270/v1591621734/project1_matrix_ocy5gc_h1kg0m.jpg)
+[Time/Priority Matrix](https://i.imgur.com/PWVuN6y.jpg)
 
-Include a full list of features that have been prioritized based on the `Time and Priority` Matix.  This involves drawing a a square.  In the middle of the square, on the x axis draw a line.  The most left part of the line should start with 0hrs and the end of the line should include 2hrs.  This line will be used to estimate how much time any one feature will take to complete. 
-
-Now draw a vertical line on the y axis.  The top of this line should have `High` and the bottom `Low`.  This line will be used to assign a priority to to each feature you wish to include in the project.  
-
-Now create a separate list starting with A and assign it one of the features.  Continue to assign each feature a letter.  Once complete add each letter to the matrix assigning based on what your feel it's prioirty is an how long it will take to implement. If any one feature takes longer than 2hrs to complete than break it down into smaller tasks and reassign them a new letter. 
+Please see in the link above the features listed to implement as part of this project, listed out in an ordered list. Each component has been added to the matrix and assigned based on an estimate of its priority and how long it will take to implement. If any one feature takes longer than 3hrs to complete then I have broken it down into smaller tasks and reassigned them a new letter. 
 
 Once complete tally up the time and determine how long the project will take to complete. Now break those features into MVP and PostMVP so you can guarantee you will have a fully functioning project to demo. 
 
@@ -90,14 +86,18 @@ MVP
 * Must be mobile mobile first, then tablet and desktop responsive
 * Must pull in projects via API call from google sheet
 * Be deployed and accessible online either via Github Pages or Surge.
+* Pre-work deliverables: Mobile Wireframes, Desktop Wireframes, Timeline, Priority Matrix
+* CMS fully completed with information
 
 Post-MVP
 * Add secondary more detailed project information to your google sheet and your render
 * Add a sort field to your google sheet and your render
+* CSS Embellishmenst and animations
 * Add an optional photography section
 	* Make a new photography CMS
 	* Render photography elements on the page
 * Add a personality section, whether that be for outdoors trips, personal goals in progress, books you're reading, something to show off who you actually are
+
 
 
 ## Functional Components
@@ -106,29 +106,38 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
+* Page Indexing - 10 minutes
+* Project Card Sorting - 1 hour
+* Project Detailed View - 2 hours
+* CMS Information Render - 3 hours
+
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Hamburger | H | 1hr | hr |
-| Project Previews | H | 3hr | hr |
 | Regular Nav | H | 1hr | hr |  
-| Adding Form | H | 1.5hr|  hr | 
+| Card Components | H | 2hrs|  hr | 
 | Other sections and flex| M | 3hr | hr|
 | Working with API | H | 3hrs|  hr | 
-| Responsive | H | 3hr | hr | hr |
+| Responsive | H | 2hr | hr | hr |
+| Mobile CSS and Bootstrap | H | 3hrs| hr |
 | Social Media Icons | L | 1hr |  hr |
-| Total | H | 15.5hrs| hrs |
+| CMS Data Finalization | H | 1hr | hr |
+| Total | H | 15hrs| hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Project Hover | L | 3hr | -hr | hr |
+| Project Hover | L | 3hr | hr |
+| Animations | L | 3hrs | hr |
+| Detailed Project View | M | 2hrs | hr | 
+| Sort Functionality | L | 1hr | hr |
 | Banner letters wiggle | L | 1hr | hr |
 | Interactive Banner | M | 4hr | hr |
 | Materialize | H | 4hr | -hr | hr |
 | Bootstrap | H | 4hr | hr |
 | Make own icon | L | 4hr | hr |
-| Total | H | 20hrs| hrs |
+| Total | H | 26hrs| hrs |
 
 ## Additional Libraries
 JQuery - used to more easily manipulate the DOM
