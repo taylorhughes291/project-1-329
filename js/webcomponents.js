@@ -4,11 +4,21 @@
 // Web Components Classes Here
 //////////////////////////////////
 
-class TemplateExample extends HTMLElement {
+class ProjectCard extends HTMLElement {
     constructor(){
         super()
 
-        this.innerHTML = `<h1>Hello World</h1>`
+        this.innerHTML = `<div class="card" style="width: 18rem;">
+        <img src="https://placeimg.com/275/275/any" class="card-img-top" alt="project screenshot">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>`
     }
 }
 
@@ -18,4 +28,4 @@ class TemplateExample extends HTMLElement {
 // Register the HTML Tag here
 /////////////////////////////////
 
-customElements.define("template-example", TemplateExample)
+customElements.define("project-card", ProjectCard)

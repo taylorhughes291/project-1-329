@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/webcomponents.js" defer></script>
     <script src="js/app.js" defer></script>
+    <script src="https://kit.fontawesome.com/23663c0a18.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -47,9 +48,9 @@
           <img src="https://placeimg.com/100/100/any" alt="Taylor Hughes personal logo">
         </div>
         <ul id="">
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Projects</li>
+          <li>About Me</li>
+          <li>Contact</li>
         </ul>
       </nav>
     </header>
@@ -58,11 +59,52 @@
         Me in a Nutshell
       </div>
       <div id="categories">
-        <div class="software category"></div>
-        <div class="photography category"></div>
-        <div class="outdoors category"></div>
+        <div class="software category">
+          <img src="https://placeimg.com/100/100/any" alt="computer link to software projects">
+        </div>
+        <div class="photography category">
+          <img src="https://placeimg.com/100/100/any" alt="computer link to software projects">
+        </div>
+        <div class="outdoors category">
+          <img src="https://placeimg.com/100/100/any" alt="computer link to software projects">
+        </div>
+      </div>
+      <div class="projects">
+        <project-card>
+      </div>
+      <div class="contact-section">
+        <h2>Contact Me</h2>
+          <div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Name</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button class="btn btn-primary" type="button">Submit</button>
+            </div>
+          </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div>
+        <img src="https://placeimg.com/100/100/any" alt="">
+        <h3>Taylor Hughes</h3>
+      </div>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-github-square"></i>
+        <i class="fas fa-envelope-square"></i>
+      <div>
+
+      </div>
+    </footer>
   </body>
 </html>
