@@ -11,6 +11,7 @@ class ProjectCard extends HTMLElement {
 
 
         this.innerHTML = `
+        <div class="project">
         <h2>${this.getAttribute("project")}</h2>
         <div class="card" style="width: 18rem;">
         <img src="${this.getAttribute("image")}" class="card-img-top" alt="project screenshot">
@@ -21,7 +22,9 @@ class ProjectCard extends HTMLElement {
           <a href="${this.getAttribute("liveurl")}" class="card-link">Go To Site</a>
           <a href="${this.getAttribute("giturl")}" class="card-link">Github Link</a>
         </div>
-      </div>`
+        </div>
+        </div>
+        `
     }
 }
 

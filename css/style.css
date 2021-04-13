@@ -98,8 +98,17 @@ div.projects project-card {
     margin-bottom: 20px;
 }
 
+div.project {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
 div.card {
     margin-top: 10px;
+    border: 1px solid #554D56;
 }
 
 div.card-body {
@@ -145,7 +154,7 @@ footer div.icons {
 }
 
 footer div img {
-    max-width: 75px;
+    max-width: 60px;
     height: auto;
 }
 
@@ -182,6 +191,7 @@ footer h3 {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+        align-items: flex-start;
     }
 
     /* CONTACT FORM */
@@ -279,6 +289,7 @@ p.card-text {
 
 h1, h2, h3, li {
     font-family: 'Playfair Display', serif !important;
+
 }
 
 h1 {
@@ -294,12 +305,18 @@ li {
 }
 
 a.card-link {
-    border: 1px solid;
-    width: 135px;
-    height: 30px;
+    border: 3px solid #554D56;
+    width: 150px;
+    height: 40px;
     text-decoration: none;
-    vertical-align: center;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    background-color: #9CC186;
+    color: #554D56;
+    font-family: 'Lora', serif;
+    font-weight: 700;
 }
 
 i.fa-caret-up {
