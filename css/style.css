@@ -5,6 +5,8 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 906px;
+    margin: 0 auto;
 }
 
 header nav div#personal-brand, header nav ul {
@@ -38,10 +40,12 @@ main div#nutshell {
 }
 
 main div#categories {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2px;
     height: auto;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 /* main div.category:nth-of-type(1), main div.category:nth-of-type(2) {
@@ -63,9 +67,9 @@ main div.category img {
 div.projects {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin: 30px 0 15px;
+    margin: 30px auto 15px;
 }
 
 div.projects project-card {
@@ -152,7 +156,7 @@ footer p {
     }
 
     footer div.logo {
-        padding: 0 30px 10px;;
+        padding: 0 30px 10px;
     }
 
     footer div.icons {
@@ -168,7 +172,49 @@ footer p {
     div.projects {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     
+}
+
+@media screen and (min-width: 1024px) {
+
+    header nav {
+        margin-top: 15px;
+    }
+
+    header nav div#personal-brand, header nav ul {
+        margin: 10px 0 !important;
+    }
+
+    header .title {
+        display: inline;
+    }
+
+
+
+    div.projects {
+        justify-content: space-between;
+        max-width: 906px;
+    }
+
+    div.inputs {
+        width: 906px;
+    }
+
+    footer {
+        max-width: 906px;
+        margin: 0 auto !important;
+    }
+
+    footer div.logo {
+        padding: 0 0 10px;
+    }
+
+    footer div.icons {
+        display: flex;
+        padding: 0 0 10px;
+        width: 200px;
+    }
 }
