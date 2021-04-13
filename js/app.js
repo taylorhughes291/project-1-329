@@ -25,7 +25,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
 
     projects.forEach((item, index) => {
         const $projectContainer = $('div.projects')
-        $projectContainer.html(`
+        $projectContainer.append(`
             <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
         `)
     })
