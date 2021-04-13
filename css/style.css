@@ -41,6 +41,7 @@ main div#categories {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2px;
+    height: auto;
 }
 
 /* main div.category:nth-of-type(1), main div.category:nth-of-type(2) {
