@@ -20,7 +20,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Monday - 2 hours| HTML Structure for mobile | Complete - 2 hrs
 |Tuesday - 2 hours| Creation of custom HTML card classes and components | Complete - 2 hrs
 |Tuesday - 3 hours| CSS/Bootstrap layout for mobile | Complete - 3 hours
-|Tuesday - 2 hours| CSS/Bootstrap layout for desktop | Incomplete
+|Tuesday - 2 hours| CSS/Bootstrap layout for desktop | Complete - 2 hours
 |Tuesday - 3 hours| Additional CSS embellishments | Incomplete
 |Tuesday - 2 hours| Generate any logos or assets needed | Incomplete
 |Wednesday - 3 hours| Render Primary project information via JS | Incomplete

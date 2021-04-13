@@ -1,4 +1,4 @@
-
+/* ~~~~~~~~~~LAYOUTS~~~~~~~~~~~ */
 /* NAVBAR */
 
 header nav {
@@ -118,7 +118,7 @@ footer div img {
     height: auto;
 }
 
-footer p {
+footer h3 {
     display: inline;
     padding-left: 15px;
 }
@@ -127,6 +127,8 @@ footer p {
 /* MEDIA QUERY FOR TABLET */
 
 @media screen and (min-width: 768px) {
+
+    /* HEADER */
     header nav ul {
         flex-direction: row;
         width: 250px;
@@ -144,6 +146,14 @@ footer p {
         width: 300px;
     }
 
+    /* PROJECTS */
+    div.projects {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    /* CONTACT FORM */
     div.inputs {
         width: 650px;
     }
@@ -155,6 +165,7 @@ footer p {
         align-items: center;
     }
 
+    /* FOOTER */
     footer div.logo {
         padding: 0 30px 10px;
     }
@@ -169,17 +180,11 @@ footer p {
         display: none;
     }
 
-    div.projects {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    
 }
 
 @media screen and (min-width: 1024px) {
 
+    /* HEADER */
     header nav {
         margin-top: 15px;
     }
@@ -193,16 +198,18 @@ footer p {
     }
 
 
-
+    /* PROJECTS */
     div.projects {
         justify-content: space-between;
         max-width: 906px;
     }
 
+    /* CONTACT FORM */
     div.inputs {
         width: 906px;
     }
 
+    /* FOOTER */
     footer {
         max-width: 906px;
         margin: 0 auto !important;
@@ -217,4 +224,23 @@ footer p {
         padding: 0 0 10px;
         width: 200px;
     }
+}
+
+
+/* ~~~~~~~~~~~~ STYLES ~~~~~~~~~~~ */
+body {
+    background-color: #F6EFA2;
+    color: #554D56;
+}
+
+h1, h2, h3, li {
+    font-family: 'Playfair Display', serif !important;
+}
+
+h1 {
+    font-size: 40px !important;
+}
+
+li {
+    font-size: 16px !important;
 }
