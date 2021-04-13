@@ -41,20 +41,18 @@ main div#nutshell {
 main div#categories {
     display: flex;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2px;
+    grid-gap: 7px;
     height: auto;
     justify-content: center;
     flex-wrap: nowrap;
 }
 
 div#nutshell img {
-    width: 300px;
+    width: 250px;
     
 }
 
-/* main div.category:nth-of-type(1), main div.category:nth-of-type(2) {
-    border-right: 2px solid black;
-} */
+
 
 main div.category {
     display: flex;
@@ -156,6 +154,7 @@ footer div.icons {
 footer div img {
     max-width: 60px;
     height: auto;
+    margin: 5px;
 }
 
 footer h3 {
@@ -184,6 +183,22 @@ footer h3 {
         align-items: center;
         justify-content: space-between;
         width: 300px;
+    }
+
+    /* NUTSHELL */
+
+    main div#categories {
+        display: flex;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        height: auto;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    div#nutshell img {
+        width: 400px;
+        
     }
 
     /* PROJECTS */
