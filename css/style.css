@@ -34,7 +34,6 @@ main div#nutshell {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
     font-size: 35px;
     margin-bottom: 10px;
 }
@@ -64,16 +63,38 @@ main div.category img {
 
 /* PROJECTS */
 
+div.arrow-cont {
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    margin-top: -25px;
+}
+
+div.arrow {
+    width: 100%;
+    max-width: 301px;
+    display: flex;
+    justify-content: center;
+}
+
+i.fa-caret-up {
+    position: center;
+}
+
 div.projects {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 30px auto 15px;
+    margin: 10px auto 15px;
 }
 
 div.projects project-card {
     margin-bottom: 20px;
+}
+
+div.card {
+    margin-top: 10px;
 }
 
 /* CONTACT FORM */
@@ -233,6 +254,19 @@ body {
     color: #554D56;
 }
 
+div.projects {
+    border-top: 25px solid #E38D78;
+    padding-top: 15px;
+}
+
+div.card {
+    /* background-color: #D7F1FE; */
+}
+
+p.card-text {
+    font-family: 'Lora', serif;
+}
+
 h1, h2, h3, li {
     font-family: 'Playfair Display', serif !important;
 }
@@ -241,6 +275,14 @@ h1 {
     font-size: 40px !important;
 }
 
+h2 {
+    font-size: 25px !important;
+}
+
 li {
     font-size: 16px !important;
+}
+
+i.fa-caret-up {
+    color: #E38D78;
 }

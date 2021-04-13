@@ -8,10 +8,13 @@ class ProjectCard extends HTMLElement {
     constructor(){
         super()
 
-        this.innerHTML = `<div class="card" style="width: 18rem;">
+
+
+        this.innerHTML = `
+        <h2>${this.getAttribute("project")}</h2>
+        <div class="card" style="width: 18rem;">
         <img src="${this.getAttribute("image")}" class="card-img-top" alt="project screenshot">
         <div class="card-body">
-          <h5 class="card-title">${this.getAttribute("project")}</h5>
           <p class="card-text">${this.getAttribute("description")}</p>
         </div>
         <div class="card-body">
