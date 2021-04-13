@@ -47,6 +47,11 @@ main div#categories {
     flex-wrap: nowrap;
 }
 
+div#nutshell img {
+    width: 300px;
+    
+}
+
 /* main div.category:nth-of-type(1), main div.category:nth-of-type(2) {
     border-right: 2px solid black;
 } */
@@ -95,6 +100,11 @@ div.projects project-card {
 
 div.card {
     margin-top: 10px;
+}
+
+div.card-body {
+    display: flex;
+    justify-content: space-around;
 }
 
 /* CONTACT FORM */
@@ -281,6 +291,15 @@ h2 {
 
 li {
     font-size: 16px !important;
+}
+
+a.card-link {
+    border: 1px solid;
+    width: 135px;
+    height: 30px;
+    text-decoration: none;
+    vertical-align: center;
+    text-align: center;
 }
 
 i.fa-caret-up {
