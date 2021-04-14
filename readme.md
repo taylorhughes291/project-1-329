@@ -23,8 +23,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Tuesday - 2 hours| CSS/Bootstrap layout for desktop | Complete - 2 hours
 |Tuesday - 3 hours| Additional CSS embellishments | Complete - 4 hours
 |Tuesday - 2 hours| Generate any logos or assets needed | Complete - 3 hours
-|Wednesday - 3 hours| Render Primary project information via JS | Incomplete
-|Wednesday - 1 hour| Enable a sort functionality on projects | Incomplete
+|Wednesday - 3 hours| Render Primary project information via JS | Complete - 2 hours
+|Wednesday - 1 hour| Enable a sort functionality on projects | Not Implementing
+|Wednesday - 2 hours| Enable a limit to projects with the option to see more | Complete - 3 hours
 |Wednesday - 2 hours| Enable Secondary display functionality to page | Incomplete 
 |Wednesday - 2 hours| Final Touches | Incomplete
 |Thursday - 1 hour| Add Secondary project information | Incomplete

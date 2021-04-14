@@ -35,15 +35,15 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
 
     //Let's limit our projects displayed to 6
     const softwareRemainder = softwareProjects.splice(6);
-    console.log(softwareRemainder)
-    const photoRemainder = softwareProjects.splice(6);
-    const outdoorRemainder = softwareProjects.splice(6);
+    console.log(softwareRemainder.length)
+    const photoRemainder = photoProjects.splice(6);
+    const outdoorRemainder = outdoorProjects.splice(6);
 
     //If there's anything in the remainder, we're going to want a
     // See More option on the page. Since we default start off with Software:
     const $seeMore = $('main div.see-more')
     const more = function (remainder) {
-        if (remainder.length > 0) {
+        if (remainder.length === 0) {
             $seeMore.addClass("hidden");
         } else {
             $seeMore.removeClass("hidden")
@@ -176,22 +176,39 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
         //Check your category
         if (category === "software") {
             $softContainer.empty()
-            softwareProjects.concat(softwareRemainder.splice(0,3))
+            // add the next 3 projects!
+            softwareProjects.push(...softwareRemainder.splice(0,3))
             softwareProjects.forEach((item, index) => {
                 const $projectContainer = $('div.software-cont')
                 $projectContainer.append(`
                 <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
                 `)
             })
+
+            // gotta check if we still need the See More div
+            more(softwareRemainder)
+        // Repeat with photo
         } else if (category === "photo") {
             $photoContainer.empty()
-            photoProjects.concat(photoRemainder.splice(0,3))
+            photoProjects.push(...photoRemainder.splice(0,3))
             photoProjects.forEach((item, index) => {
                 const $projectContainer = $('div.photo-cont')
                 $projectContainer.append(`
                 <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
                 `)
             })
+            more(photoRemainder)
+        //Repeat with outdoors
+        } else if (category === "outdoors") {
+            $outdoorContainer.empty()
+            outdoorProjects.push(...outdoorRemainder.splice(0,3))
+            outdoorProjects.forEach((item, index) => {
+                const $projectContainer = $('div.outdoor-cont')
+                $projectContainer.append(`
+                <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+                `)
+            })
+            more(outdoorRemainder)            
         }
         
     })
