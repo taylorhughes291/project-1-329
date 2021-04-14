@@ -84,12 +84,17 @@ i.fa-caret-up {
     position: center;
 }
 
+div.proj-cont {
+    background-color: #E38D78;
+}
+
 div.projects {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 10px auto 15px;
+    background-color: #E38D78;
 }
 
 div.projects project-card {
@@ -256,7 +261,7 @@ footer h3 {
 
     /* PROJECTS */
     div.projects {
-        justify-content: space-between;
+        justify-content: space-around;
         max-width: 906px;
     }
 
