@@ -13,6 +13,10 @@ header nav div#personal-brand, header nav ul {
     margin: 10px !important;
 }
 
+header nav img.logo-small {
+    display: none;
+}
+
 header .title {
     display: none;
     font-size: 30px;
@@ -22,6 +26,8 @@ header nav ul {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    align-self: flex-start;
+    padding: 12px 0 0 0;
 }
 
 header nav ul li {
@@ -119,6 +125,16 @@ div.card-body {
     justify-content: space-around;
 }
 
+img.card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 225px;
+}
+
+p.card-text {
+    height: 80px;
+}
+
 /* CONTACT FORM */
 
 div.contact-section h2 {
@@ -173,10 +189,21 @@ footer h3 {
 @media screen and (min-width: 768px) {
 
     /* HEADER */
+
+    div#personal-brand img {
+        width: 200px;
+    }
+
     header nav ul {
         flex-direction: row;
-        width: 250px;
+        width: 400px;
         justify-content: space-between;
+        align-self: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        font-size: 28px !important;
     }
 
     header .title {
@@ -186,7 +213,7 @@ footer h3 {
     header nav div#personal-brand {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 300px;
     }
 
@@ -248,6 +275,22 @@ footer h3 {
     /* HEADER */
     header nav {
         margin-top: 15px;
+    }
+
+    header nav img.logo {
+        object-fit:contain;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        width: 475px;
+        justify-content: space-between;
+        align-self: flex-start;
+        padding: 20px 0 0 0;
+    }
+
+    nav ul li {
+        font-size: 30px !important;
     }
 
     header nav div#personal-brand, header nav ul {
@@ -322,6 +365,11 @@ h2 {
 
 li {
     font-size: 16px !important;
+}
+
+nav ul a, nav ul a:hover, nav ul a:visited, nav ul a:active {
+    text-decoration: none;
+    color: inherit;
 }
 
 a.card-link {
