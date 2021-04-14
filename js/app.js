@@ -33,6 +33,25 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
         }
     }
 
+    //Let's limit our projects displayed to 6
+    const softwareRemainder = softwareProjects.splice(6);
+    console.log(softwareRemainder)
+    const photoRemainder = softwareProjects.splice(6);
+    const outdoorRemainder = softwareProjects.splice(6);
+
+    //If there's anything in the remainder, we're going to want a
+    // See More option on the page. Since we default start off with Software:
+    const $seeMore = $('main div.see-more')
+    const more = function (remainder) {
+        if (remainder.length > 0) {
+            $seeMore.addClass("hidden");
+        } else {
+            $seeMore.removeClass("hidden")
+        }
+    }
+    more(softwareRemainder);
+
+
     /////////////////////////////////////
     // JQUERY to render projects
     /////////////////////////////////////
@@ -40,7 +59,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
     softwareProjects.forEach((item, index) => {
         const $projectContainer = $('div.software-cont')
         $projectContainer.append(`
-            <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+        <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
         `)
     })
     photoProjects.forEach((item, index) => {
@@ -56,19 +75,34 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
         `)
     })
 
+    ///////////////////////////////////
+    // Now to add all of the functionality
+    // that will allow the user to switch between software,
+    // photography, and outdoor projects.
+    ///////////////////////////////////
+
+    // Declare all of the items I need to interact with
+
+
+    // Buttons
     const $softButton = $('#categories div.software');
     const $photoButton = $('#categories div.photography');
     const $outdoorButton = $('#categories div.outdoors');
 
+    //Containers that contain the projects
     const $softContainer = $('#projects div.software-cont')
     const $photoContainer = $('#projects div.photo-cont')
     const $outdoorContainer = $('#projects div.outdoor-cont')
 
+    //Elements that move the triangle to show what's selected :)
     const $triangle = $('main div.arrow-cont i')
     const $triLeft = $('main div.arrow-left')
     const $triCenter = $('main div.arrow-center')
     const $triRight = $('main div.arrow-right')
 
+    // What to do if the software button is clicked
+    // First let's keep track of what category we're in
+    let category = "software";
     $softButton.on("click", () => {
         if($softContainer.hasClass("hidden")) {
             if (!$photoContainer.hasClass("hidden")) {
@@ -80,8 +114,17 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
                 $outdoorContainer.toggleClass("hidden")
             }
             $triLeft.append($triangle)
+            //Reset your category tracker
+            category = "software"
+
+            // Let's check again on the remainder of software projects
+            if (softwareRemainder.length > 0) {
+                $seeMore.toggleClass("hidden");
+            }
         }
     })
+
+    //What to do if the photography button is clicked
     $photoButton.on("click", () => {
         if($photoContainer.hasClass("hidden")) {
             if (!$softContainer.hasClass("hidden")) {
@@ -93,8 +136,17 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
                 $outdoorContainer.toggleClass("hidden")
             }
             $triCenter.append($triangle)
+            //Reset your category tracker
+            category = "photo"
+
+            // Let's check again on the remainder of software projects
+            if (photoRemainder.length > 0) {
+                $seeMore.toggleClass("hidden");
+            }
         }
     })
+
+    // What to do if the outdoors button is clicked
     $outdoorButton.on("click", () => {
         if($outdoorContainer.hasClass("hidden")) {
             if (!$photoContainer.hasClass("hidden")) {
@@ -106,8 +158,44 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
                 $outdoorContainer.toggleClass("hidden")
             }
             $triRight.append($triangle)
+            //Reset your category tracker
+            category = "outdoors"
+
+            // Let's check again on the remainder of software projects
+            if (outdoorRemainder.length > 0) {
+                $seeMore.toggleClass("hidden");
+            }
         }
     })
+
+    ////////////////////////////
+    // See-more functionality
+    ////////////////////////////
+
+    $seeMore.on("click", () => {
+        //Check your category
+        if (category === "software") {
+            $softContainer.empty()
+            softwareProjects.concat(softwareRemainder.splice(0,3))
+            softwareProjects.forEach((item, index) => {
+                const $projectContainer = $('div.software-cont')
+                $projectContainer.append(`
+                <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+                `)
+            })
+        } else if (category === "photo") {
+            $photoContainer.empty()
+            photoProjects.concat(photoRemainder.splice(0,3))
+            photoProjects.forEach((item, index) => {
+                const $projectContainer = $('div.photo-cont')
+                $projectContainer.append(`
+                <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+                `)
+            })
+        }
+        
+    })
+
 
 
 })

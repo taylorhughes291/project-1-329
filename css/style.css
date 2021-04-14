@@ -99,7 +99,7 @@ div.projects {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 10px auto 15px;
+    margin: 10px auto 0;
     background-color: #E38D78;
 }
 
@@ -108,7 +108,7 @@ div.projects project-card {
 }
 
 main div.hidden {
-    display: none;
+    display: none !important;
 }
 
 div.project {
@@ -143,12 +143,34 @@ p.card-text {
     height: 80px;
 }
 
+/* SEE MORE */
+
+main div.see-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #554D56;
+    height: 40px;
+}
+
+main div.see-more h2 {
+    color: white;
+    font-size: 20px !important;
+    margin-bottom: -18px;
+}
+
+main div.see-more div {
+    margin-bottom: -18px;
+}
+
 /* CONTACT FORM */
 
 div.contact-section h2 {
     text-align: center;
     font-size: 35px;
 }
+
 
 /* FOOTER */
 
