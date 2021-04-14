@@ -64,6 +64,11 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
     const $photoContainer = $('#projects div.photo-cont')
     const $outdoorContainer = $('#projects div.outdoor-cont')
 
+    const $triangle = $('main div.arrow-cont i')
+    const $triLeft = $('main div.arrow-left')
+    const $triCenter = $('main div.arrow-center')
+    const $triRight = $('main div.arrow-right')
+
     $softButton.on("click", () => {
         if($softContainer.hasClass("hidden")) {
             if (!$photoContainer.hasClass("hidden")) {
@@ -74,6 +79,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
                 $softContainer.toggleClass("hidden")
                 $outdoorContainer.toggleClass("hidden")
             }
+            $triLeft.append($triangle)
         }
     })
     $photoButton.on("click", () => {
@@ -86,6 +92,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
                 $photoContainer.toggleClass("hidden")
                 $outdoorContainer.toggleClass("hidden")
             }
+            $triCenter.append($triangle)
         }
     })
     $outdoorButton.on("click", () => {
@@ -98,6 +105,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
                 $softContainer.toggleClass("hidden")
                 $outdoorContainer.toggleClass("hidden")
             }
+            $triRight.append($triangle)
         }
     })
 

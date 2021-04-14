@@ -46,7 +46,6 @@ main div#nutshell {
 
 main div#categories {
     display: flex;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 7px;
     height: auto;
     justify-content: center;
@@ -76,12 +75,13 @@ div.arrow-cont {
     height: 21px;
     display: flex;
     justify-content: center;
+    grid-gap: 7px;
     margin-top: -25px;
 }
 
 div.arrow {
     width: 100%;
-    max-width: 301px;
+    max-width: 200px;
     display: flex;
     justify-content: center;
 }
@@ -229,7 +229,6 @@ footer h3 {
 
     main div#categories {
         display: flex;
-        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px;
         height: auto;
         justify-content: center;
@@ -239,6 +238,10 @@ footer h3 {
     div#nutshell img {
         width: 400px;
         
+    }
+
+    main div.arrow-cont {
+        grid-gap: 20px;
     }
 
     /* PROJECTS */
