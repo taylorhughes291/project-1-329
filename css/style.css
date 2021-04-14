@@ -107,6 +107,10 @@ div.projects project-card {
     margin-bottom: 20px;
 }
 
+main div.hidden {
+    display: none;
+}
+
 div.project {
     max-width: 300px;
     display: flex;
@@ -129,6 +133,10 @@ img.card-img-top {
     object-fit: cover;
     width: 100%;
     height: 225px;
+}
+
+div.project h2 {
+    text-align: center;
 }
 
 p.card-text {
@@ -277,8 +285,8 @@ footer h3 {
         margin-top: 15px;
     }
 
-    header nav img.logo {
-        object-fit:contain;
+    header nav div#personal-brand {
+        padding-left: 50px;
     }
 
     header nav ul {
@@ -286,7 +294,7 @@ footer h3 {
         width: 475px;
         justify-content: space-between;
         align-self: flex-start;
-        padding: 20px 0 0 0;
+        padding: 20px 50px 0 0;
     }
 
     nav ul li {
@@ -301,6 +309,11 @@ footer h3 {
         display: inline;
     }
 
+    /* NUTSHELL */
+
+    div#nutshell {
+        margin-top: -45px;
+    }
 
     /* PROJECTS */
     div.projects {

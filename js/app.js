@@ -13,22 +13,94 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
             description: item.gsx$description.$t,
             image: item.gsx$image.$t,
             liveurl: item.gsx$liveurl.$t,
-            giturl: item.gsx$giturl.$t
+            giturl: item.gsx$giturl.$t,
+            category: item.gsx$category.$t
         }
     })
 
-    console.log(projects[0]);
+    // Split the projects into separate arrays based on categories
+    const softwareProjects = [];
+    const photoProjects = [];
+    const outdoorProjects = [];
+
+    for (i = 0; i < projects.length; i += 1) {
+        if (projects[i].category === "software") {
+            softwareProjects.push(projects[i])
+        } else if (projects[i].category === "photography") {
+            photoProjects.push(projects[i])
+        } else if (projects[i].category === "outdoors") {
+            outdoorProjects.push(projects[i])
+        }
+    }
 
     /////////////////////////////////////
     // JQUERY to render projects
     /////////////////////////////////////
 
-    projects.forEach((item, index) => {
-        const $projectContainer = $('div.projects')
+    softwareProjects.forEach((item, index) => {
+        const $projectContainer = $('div.software-cont')
         $projectContainer.append(`
             <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
         `)
     })
+    photoProjects.forEach((item, index) => {
+        const $projectContainer = $('div.photo-cont')
+        $projectContainer.append(`
+            <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+        `)
+    })
+    outdoorProjects.forEach((item, index) => {
+        const $projectContainer = $('div.outdoor-cont')
+        $projectContainer.append(`
+            <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+        `)
+    })
+
+    const $softButton = $('#categories div.software');
+    const $photoButton = $('#categories div.photography');
+    const $outdoorButton = $('#categories div.outdoors');
+
+    const $softContainer = $('#projects div.software-cont')
+    const $photoContainer = $('#projects div.photo-cont')
+    const $outdoorContainer = $('#projects div.outdoor-cont')
+
+    $softButton.on("click", () => {
+        if($softContainer.hasClass("hidden")) {
+            if (!$photoContainer.hasClass("hidden")) {
+                $softContainer.toggleClass("hidden")
+                $photoContainer.toggleClass("hidden")
+            }
+            if (!$outdoorContainer.hasClass("hidden")) {
+                $softContainer.toggleClass("hidden")
+                $outdoorContainer.toggleClass("hidden")
+            }
+        }
+    })
+    $photoButton.on("click", () => {
+        if($photoContainer.hasClass("hidden")) {
+            if (!$softContainer.hasClass("hidden")) {
+                $softContainer.toggleClass("hidden")
+                $photoContainer.toggleClass("hidden")
+            }
+            if (!$outdoorContainer.hasClass("hidden")) {
+                $photoContainer.toggleClass("hidden")
+                $outdoorContainer.toggleClass("hidden")
+            }
+        }
+    })
+    $outdoorButton.on("click", () => {
+        if($outdoorContainer.hasClass("hidden")) {
+            if (!$photoContainer.hasClass("hidden")) {
+                $outdoorContainer.toggleClass("hidden")
+                $photoContainer.toggleClass("hidden")
+            }
+            if (!$softContainer.hasClass("hidden")) {
+                $softContainer.toggleClass("hidden")
+                $outdoorContainer.toggleClass("hidden")
+            }
+        }
+    })
+
 
 })
 .catch((error) => {
