@@ -19,8 +19,8 @@ class ProjectCard extends HTMLElement {
           <p class="card-text">${this.getAttribute("description")}</p>
         </div>
         <div class="card-body">
-          <a href="${this.getAttribute("liveurl")}" class="card-link">Go To Site</a>
-          <a href="${this.getAttribute("giturl")}" class="card-link">Github Link</a>
+          <a href="${this.getAttribute("liveurl")}" class="card-link"></a>
+          <a href="${this.getAttribute("giturl")}" class="card-link"></a>
         </div>
         </div>
         </div>
@@ -36,7 +36,7 @@ class ProjectDetails extends HTMLElement {
       <div class="px-0 project-details">
         <div>
           <h2>Project Details</h2>
-          
+
         </div>
         <div>
 

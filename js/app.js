@@ -77,6 +77,24 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
         `)
     })
 
+    // Let's make custom buttons for each category
+
+    const buttonApply = function (category, button1, button2) {
+        const $buttons = $(`div.${category}-cont project-card div.card-body a`)
+        for (i = 0; i < $buttons.length; i += 1) {
+            if (i % 2 === 0) {
+                $buttons.eq(i).text(button1)
+            } else {
+                $buttons.eq(i).text(button2)
+            }
+        }
+    }
+
+    buttonApply("software", "Go To Site", "Github Link")
+    buttonApply("photo", "Instagram", "Buy Prints")
+    buttonApply("outdoor", "Maps", "Trip Report")
+
+
     ///////////////////////////////////
     // Now to add all of the functionality
     // that will allow the user to switch between software,
@@ -224,6 +242,30 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
     // $('project-details').addClass("container-fluid")
     // $('project-details').addClass("px-0")
 
+
+    ///////////////////////////////
+    // Send email message
+    ///////////////////////////////
+
+    // I have set up a google apps script to send myself an email. I will now
+    // collect the information upon submit and send it to the apps script.
+
+    const $emailName = $('div#contact div.inputs input.name-email')
+    const $emailEmail = $('div#contact div.inputs input.email-email')
+    const $emailMessage = $('div#contact div.inputs textarea.message-email')
+    const $emailButton = $('div#contact div.inputs button.btn')
+
+    $emailButton.on("click", () => {
+        const url = "https://script.google.com/macros/s/AKfycbzZjb85BeuAfu_JNJYWriNn96y6iehPKX3wBDAZpE8VOnUJzEUjSwIxPmUtOyZnORXK/exec"
+        const options = {
+            name: $emailName.val(),
+            email: $emailEmail.val(),
+            message: $emailMessage.val()
+        }
+        console.log(options);
+        $.post(url, options)
+        
+    })
 
 
 })
