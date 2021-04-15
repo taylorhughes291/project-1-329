@@ -311,7 +311,7 @@ footer h3 {
     }
 
     header nav div#personal-brand {
-        padding-left: 50px;
+        padding-left: 75px;
     }
 
     header nav ul {
@@ -380,6 +380,11 @@ div.projects {
     padding-top: 15px;
 }
 
+div.project-details {
+    background-color: #554D56;
+    color:#9cdcfc;
+}
+
 div.card {
     /* background-color: #D7F1FE; */
 }
@@ -427,4 +432,8 @@ a.card-link {
 
 i.fa-caret-up {
     color: #E38D78;
+}
+
+.form-label, .form-control {
+    font-family: 'Lora', serif;
 }

@@ -14,7 +14,9 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
             image: item.gsx$image.$t,
             liveurl: item.gsx$liveurl.$t,
             giturl: item.gsx$giturl.$t,
-            category: item.gsx$category.$t
+            category: item.gsx$category.$t,
+            details: item.gsx$details.$t,
+            tools: item.gsx$details.$t
         }
     })
 
@@ -212,6 +214,15 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
         }
         
     })
+
+    ////////////////////////
+    // Project Details upon click
+    ////////////////////////
+
+    let $restaurantSplitter = $('project-card').eq(0)
+    $restaurantSplitter.after(`<project-details></project-details>`)
+    $('project-details').addClass("container-fluid")
+    $('project-details').addClass("px-0")
 
 
 

@@ -28,6 +28,26 @@ class ProjectCard extends HTMLElement {
     }
 }
 
+class ProjectDetails extends HTMLElement {
+  constructor() {
+    super()
+
+    this.innerHTML = `
+      <div class="container-fullwidth px-0 project-details">
+        <h1>This is a test</h1>
+
+        // <div>
+
+        // </div>
+        // <div>
+
+        // </div>
+      </div>
+    `
+  }
+
+}
+
 
 
 /////////////////////////////////
@@ -35,3 +55,4 @@ class ProjectCard extends HTMLElement {
 /////////////////////////////////
 
 customElements.define("project-card", ProjectCard)
+customElements.define("project-details", ProjectDetails)
