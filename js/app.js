@@ -61,19 +61,19 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
     softwareProjects.forEach((item, index) => {
         const $projectContainer = $('div.software-cont')
         $projectContainer.append(`
-        <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+        <project-card class="index-${index}" project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
         `)
     })
     photoProjects.forEach((item, index) => {
         const $projectContainer = $('div.photo-cont')
         $projectContainer.append(`
-            <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+            <project-card class="index-${index}" project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
         `)
     })
     outdoorProjects.forEach((item, index) => {
         const $projectContainer = $('div.outdoor-cont')
         $projectContainer.append(`
-            <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+            <project-card class="index-${index}" project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
         `)
     })
 
@@ -183,7 +183,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
             softwareProjects.forEach((item, index) => {
                 const $projectContainer = $('div.software-cont')
                 $projectContainer.append(`
-                <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+                <project-card class="index-${index}" project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
                 `)
             })
 
@@ -196,7 +196,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
             photoProjects.forEach((item, index) => {
                 const $projectContainer = $('div.photo-cont')
                 $projectContainer.append(`
-                <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+                <project-card class="index-${index}" project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
                 `)
             })
             more(photoRemainder)
@@ -207,7 +207,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
             outdoorProjects.forEach((item, index) => {
                 const $projectContainer = $('div.outdoor-cont')
                 $projectContainer.append(`
-                <project-card project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
+                <project-card class="index-${index}" project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
                 `)
             })
             more(outdoorRemainder)            
@@ -215,14 +215,14 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
         
     })
 
-    ////////////////////////
-    // Project Details upon click
-    ////////////////////////
+    // ////////////////////////
+    // // Project Details upon click
+    // ////////////////////////
 
-    let $restaurantSplitter = $('project-card').eq(0)
-    $restaurantSplitter.after(`<project-details></project-details>`)
-    $('project-details').addClass("container-fluid")
-    $('project-details').addClass("px-0")
+    // let $restaurantSplitter = $('project-card').eq(0)
+    // $restaurantSplitter.after(`<project-details></project-details>`)
+    // $('project-details').addClass("container-fluid")
+    // $('project-details').addClass("px-0")
 
 
 

@@ -33,15 +33,14 @@ class ProjectDetails extends HTMLElement {
     super()
 
     this.innerHTML = `
-      <div class="container-fullwidth px-0 project-details">
-        <h1>This is a test</h1>
+      <div class="px-0 project-details">
+        <div>
+          <h2>Project Details</h2>
+          
+        </div>
+        <div>
 
-        // <div>
-
-        // </div>
-        // <div>
-
-        // </div>
+        </div>
       </div>
     `
   }

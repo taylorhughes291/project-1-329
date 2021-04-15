@@ -385,6 +385,13 @@ div.project-details {
     color:#9cdcfc;
 }
 
+/* Please note that the below rule was taken from https://stackoverflow.com/questions/31391459/how-can-i-expand-a-child-div-to-100-screen-width-if-the-container-div-is-smalle */
+
+project-details {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+}
+
 div.card {
     /* background-color: #D7F1FE; */
 }
