@@ -26,12 +26,13 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Wednesday - 3 hours| Render Primary project information via JS | Complete - 2 hours
 |Wednesday - 1 hour| Enable a sort functionality on projects | Not Implementing
 |Wednesday - 2 hours| Enable a limit to projects with the option to see more | Complete - 3 hours
-|Wednesday - 2 hours| Enable Secondary display functionality to page | Incomplete 
-|Wednesday - 2 hours| Final Touches | Incomplete
-|Thursday - 1 hour| Add Secondary project information | Incomplete
-|Thursday - 3 hours| Add animations | Incomplete
-|Thursday - 2 hours| Determine if project meets definition of success | Incomplete
-|Thursday - 2 hours| Unplanned changes/work | Incomplete
+|Wednesday - 2 hours| Enable Secondary display functionality to page | Not Implementing - 3 hours 
+|Wednesday - 2 hours| Final Touches | Complete - 4 hours
+|Thursday - 1 hour| Add Secondary project information | Not implementing
+|Thursday - 3 hours| Add animations | Complete - 1 hour
+|Thursday - 2 hours| Determine if project meets definition of success | Complete - 1 hour
+|Thursday - 2 hours| Unplanned changes/work | Complete - 4 hours
+|Friday - 1 hour| Email functionality | Complete - 5 hours
 |Friday| Present | Incomplete
 
 
