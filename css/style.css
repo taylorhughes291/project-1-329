@@ -444,3 +444,8 @@ i.fa-caret-up {
 .form-label, .form-control {
     font-family: 'Lora', serif;
 }
+
+footer a, footer a:hover {
+    text-decoration: none;
+    color:#554D56;
+}

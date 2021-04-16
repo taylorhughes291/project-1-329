@@ -4,7 +4,6 @@
 
 $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4IIpGdERTxXm4l7vk/1/public/full?alt=json')
 .then((data) => {
-    console.log(data);
 
     // map over the data, generate a simpler data set
     const projects = data.feed.entry.map((item) => {
@@ -37,7 +36,6 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
 
     //Let's limit our projects displayed to 6
     const softwareRemainder = softwareProjects.splice(6);
-    console.log(softwareRemainder.length)
     const photoRemainder = photoProjects.splice(6);
     const outdoorRemainder = outdoorProjects.splice(6);
 
@@ -256,7 +254,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
     const $emailButton = $('div#contact div.inputs button.btn')
 
     $emailButton.on("click", () => {
-        const url = "https://script.google.com/macros/s/AKfycbxw6j5Xg7gBvP-Ao-sou_CJxKl4XoxDDR85jruoNe-tpsNzk6cQ2TnoLLnNSK1QY4oN/exec"
+        const url = "https://script.google.com/macros/s/AKfycbzibdCA7LM6GGiDkPgkykRg59dk6zzXFi46gUFxxifBodiy8OI5BeDybLq4qf9g_2kg/exec"
         const data = {
             name: $emailName.val(),
             email: $emailEmail.val(),
@@ -266,13 +264,36 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
             method: 'POST',
             body: JSON.stringify(data),
           }
-          console.log(options)
           fetch(url, options)
           .then((response) => response.text())
           .then((response) => console.log(response))
           .catch((error) => console.log(error))
+
+          $emailName.val("");
+          $emailEmail.val("");
+          $emailMessage.val("");
+
+          alert("Thanks for your email!")
         
     })
+
+    //////////////////////////////
+    // Now to add links to my icons at the bottom
+    //////////////////////////////
+
+    const $fbIcon = $('footer div.icons i.fa-facebook-square')
+
+
+    $fbIcon.on("click", () => {
+        alert("Don't use Facebook!")
+    })
+    const $fbIconSmall = $('footer div.icons-small i.fa-facebook-square')
+
+
+    $fbIconSmall.on("click", () => {
+        alert("Don't use Facebook!")
+    })
+
 
 
 })
