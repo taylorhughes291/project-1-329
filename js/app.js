@@ -256,25 +256,21 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
     const $emailButton = $('div#contact div.inputs button.btn')
 
     $emailButton.on("click", () => {
-        const url = "https://script.google.com/macros/s/AKfycbye0afQqBr6G-cP-zCZeVHDuLi-SfW-68WkkU3-A0bUOiKaBgMLIV6VT2sh3fSjZmtO/exec"
+        const url = "https://script.google.com/macros/s/AKfycbxw6j5Xg7gBvP-Ao-sou_CJxKl4XoxDDR85jruoNe-tpsNzk6cQ2TnoLLnNSK1QY4oN/exec"
         const data = {
             name: $emailName.val(),
             email: $emailEmail.val(),
             message: $emailMessage.val()
-        }
-        const options = {
+          }
+          const options = {
             method: 'POST',
-            body: data,
-            headers: {
-                'Content-Type': 'text/plain;charset=utf-8'
-            }
-        }
-        $.post(url, options)
-        .then((response) => {
-            console.log("success", response);
-        }).catch((error) => {
-            console.log(error)
-        })
+            body: JSON.stringify(data),
+          }
+          console.log(options)
+          fetch(url, options)
+          .then((response) => response.text())
+          .then((response) => console.log(response))
+          .catch((error) => console.log(error))
         
     })
 
