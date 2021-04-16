@@ -205,6 +205,8 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
 
             // gotta check if we still need the See More div
             more(softwareRemainder)
+            //reset buttons
+            buttonApply("software", "Go To Site", "Github Link")
         // Repeat with photo
         } else if (category === "photo") {
             $photoContainer.empty()
@@ -216,6 +218,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
                 `)
             })
             more(photoRemainder)
+            buttonApply("photo", "Instagram", "Buy Prints")
         //Repeat with outdoors
         } else if (category === "outdoors") {
             $outdoorContainer.empty()
@@ -226,7 +229,8 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
                 <project-card class="index-${index}" project="${item.project}" description="${item.description}" image="${item.image}" liveurl="${item.liveurl}" giturl="${item.giturl}"></project-card>
                 `)
             })
-            more(outdoorRemainder)            
+            more(outdoorRemainder)  
+            buttonApply("outdoor", "Maps", "Trip Report")       
         }
         
     })
