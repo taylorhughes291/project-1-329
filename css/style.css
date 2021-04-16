@@ -449,3 +449,15 @@ footer a, footer a:hover {
     text-decoration: none;
     color:#554D56;
 }
+
+footer i {
+    cursor: pointer;
+}
+
+main div#categories img {
+    cursor: pointer;
+}
+
+div#nutshell img:hover {
+    width: 110%;
+}
