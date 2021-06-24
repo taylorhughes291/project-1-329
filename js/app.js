@@ -309,11 +309,14 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
 const $overlay = $('.overlay')
 const $aboutButton = $('#about-button')
 const $hideButton = $('#hide-button')
+const $nutshellCont = $('#nutshell-cont')
 
 $aboutButton.on("click", () => {
     $overlay.removeClass("hidden")
+    $nutshellCont.addClass("add-background")
 })
 
 $hideButton.on("click", () => {
     $overlay.addClass("hidden")
+    $nutshellCont.removeClass("add-background")
 })
