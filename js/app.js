@@ -304,3 +304,16 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
 .catch((error) => {
     console.log(error);
 })
+
+// This code will hide and show the about me overlay over my picture
+const $overlay = $('.overlay')
+const $aboutButton = $('#about-button')
+const $hideButton = $('#hide-button')
+
+$aboutButton.on("click", () => {
+    $overlay.removeClass("hidden")
+})
+
+$hideButton.on("click", () => {
+    $overlay.addClass("hidden")
+})
