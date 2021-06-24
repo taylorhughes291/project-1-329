@@ -10,7 +10,7 @@ header nav {
 }
 
 header nav div#personal-brand, header nav ul {
-    margin: 10px !important;
+    margin: 10px 0 0 !important;
 }
 
 header nav img.logo-small {
@@ -45,7 +45,6 @@ main div#nutshell {
     justify-content: center;
     align-items: center;
     font-size: 35px;
-    margin-bottom: 10px;
 }
 
 main div#categories {
@@ -57,7 +56,9 @@ main div#categories {
 }
 
 div#nutshell img {
-    width: 250px;
+    width: 225px;
+    height: auto;
+    margin: 15px 0
     
 }
 
@@ -83,13 +84,13 @@ div.overlay {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 30px;
   }
 
 div.overlay p {
     color: white;
     text-align: center;
     margin: 0 0 25px;
+    padding: 0 30px;
 }
 
 div.overlay i {
@@ -517,8 +518,8 @@ main div#categories img {
 /* Please note the following was taken from https://stackoverflow.com/questions/20504346/increasing-the-width-of-button-by-a-few-percent-on-hover */
 div#nutshell img:hover {
     transform:scale(1.05,1.05);
-    -webkit-transform:scale(1.3,1.3);
-    -moz-transform:scale(1.3,1.3);
+    -webkit-transform:scale(1.05,1.05);
+    -moz-transform:scale(1.05,1.05);
 }
 
 main div.see-more {
