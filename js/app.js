@@ -318,12 +318,23 @@ $hideButton.on("click", () => {
 // This code will display the menu when you click on the hamburger icon, and close it when you click x
 const $hamburger = $('.hamburger')
 const $menu = $('#menu')
-const $circleMenu = $('div.circle-cont')
+
 $hamburger.on('click', () => {
-    $circleMenu.removeClass('hidden')
+    const $circleMenu = $('div.circle-cont')
+    $circleMenu.removeClass('animation-out')
+    const $newCircle = $circleMenu.clone(true)
+    
+
+    $circleMenu.before($newCircle)
+    $('.circle-cont:last').remove()
+    $newCircle.removeClass('hidden')
+    $newCircle.addClass('animation-in')
 })
 
 const $hideCircle = $('#hide-circle')
 $hideCircle.on('click', () => {
-    $circleMenu.addClass('hidden')
+    const $circleMenu = $('div.circle-cont')
+    $circleMenu.addClass('animation-out')
+    $circleMenu.removeClass('animation-in')
+    // $circleMenu.addClass('hidden')
 })

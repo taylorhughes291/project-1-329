@@ -38,8 +38,8 @@ header div.circle-cont {
     background: #554D56;
     border-radius: 50%;
     position: absolute;
-    top: -150px;
-    right: -150px
+    top: -300px;
+    right: -300px;
 }
 
 header div.circle-cont div.circle-menu-cont {
@@ -567,4 +567,38 @@ div#nutshell img:hover {
 
 main div.see-more {
     cursor: pointer;
+}
+
+
+/* ~~~~~~~~~~~~~ ANIMATIONS ~~~~~~~~~~~~~ */
+@keyframes mobileMenuAppear {
+    0% {
+        transform: none;
+    }
+
+    100% {
+        transform: translate(-150px, 150px)
+    }
+}
+
+@keyframes mobileMenuDisappear {
+    0% {
+        transform: translate(-150px, 150px)
+    }
+    
+    100% {
+        transform: none;
+    }
+}
+
+header div.animation-in {
+    animation-name: mobileMenuAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+header div.animation-out {
+    animation-name: mobileMenuDisappear;
+    animation-duration: 1s;
+    animation-direction: forwards;
 }
