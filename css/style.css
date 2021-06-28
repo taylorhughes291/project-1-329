@@ -4,13 +4,9 @@
 header nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 906px;
-    margin: 0 auto;
-}
-
-header nav div#personal-brand, header nav ul {
-    margin: 10px 0 0 !important;
+    margin: 10px auto 0;
 }
 
 header nav img.logo-small {
@@ -23,16 +19,55 @@ header .title {
 }
 
 header nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    align-self: flex-start;
-    padding: 12px 0 0 0;
+    display: none;
 }
 
 header nav ul li {
     padding: 5px;
     cursor: pointer;
+}
+
+header nav i {
+    padding: 30px 30px 0;
+    cursor: pointer;
+}
+
+header div.circle-cont {
+    width: 290px;
+    height: 290px;
+    background: #554D56;
+    border-radius: 50%;
+    position: absolute;
+    top: -150px;
+    right: -150px
+}
+
+header div.circle-cont div.circle-menu-cont {
+    position: relative;
+    top: 165px;
+    right: 165px;
+
+}
+
+header div.circle-cont div.circle-menu-cont li {
+    text-align: right;
+    margin-bottom: 13px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header div.circle-cont div.circle-menu-cont li:first-of-type {
+    margin: 0 30px 13px 0;
+}
+
+header div.circle-cont div.circle-menu-cont li:nth-of-type(3) {
+    margin: 0 -8px 11px 0;
+}
+
+header div.circle-cont div.circle-menu-cont a {
+    color: white;
+    text-decoration: none;
 }
 
 /* NUTSHELL */
@@ -95,6 +130,7 @@ div.overlay p {
 
 div.overlay i {
     color: rgba(0,0,0,0.4);
+    cursor: pointer;
 }
 
 /* PROJECTS */
@@ -135,7 +171,7 @@ div.projects project-card {
     margin-bottom: 20px;
 }
 
-main div.hidden {
+.hidden {
     display: none !important;
 }
 
@@ -253,11 +289,13 @@ footer h3 {
     }
 
     header nav ul {
+        display: flex;
         flex-direction: row;
-        width: 400px;
+        width: 450px;
         justify-content: space-between;
         align-self: center;
-        padding: 0;
+        padding: 0 20px 0 0;
+        font-weight: bold;
     }
 
     nav ul li {
@@ -273,6 +311,10 @@ footer h3 {
         align-items: center;
         justify-content: flex-start;
         width: 300px;
+    }
+
+    header nav i.hamburger {
+        display: none;
     }
 
     /* NUTSHELL */
@@ -329,6 +371,7 @@ footer h3 {
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
+        grid-gap: 10px;
     }
 
     /* CONTACT FORM */
@@ -471,7 +514,7 @@ h2 {
 }
 
 li {
-    font-size: 16px !important;
+    font-size: 20px !important;
 }
 
 nav ul a, nav ul a:hover, nav ul a:visited, nav ul a:active {

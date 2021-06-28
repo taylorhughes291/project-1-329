@@ -19,8 +19,8 @@ class ProjectCard extends HTMLElement {
           <p class="card-text">${this.getAttribute("description")}</p>
         </div>
         <div class="card-body">
-          <a href="${this.getAttribute("liveurl")}" class="card-link"></a>
-          <a href="${this.getAttribute("giturl")}" class="card-link"></a>
+          <a href="${this.getAttribute("liveurl")}" target="_blank" rel="noreferrer noopener" class="card-link"></a>
+          <a href="${this.getAttribute("giturl")}" target="_blank" rel="noreferrer noopener" class="card-link"></a>
         </div>
         </div>
         </div>

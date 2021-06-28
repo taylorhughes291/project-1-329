@@ -320,3 +320,16 @@ $hideButton.on("click", () => {
     $overlay.addClass("hidden")
     $nutshellCont.removeClass("add-background")
 })
+
+// This code will display the menu when you click on the hamburger icon, and close it when you click x
+const $hamburger = $('.hamburger')
+const $menu = $('#menu')
+const $circleMenu = $('div.circle-cont')
+$hamburger.on('click', () => {
+    $circleMenu.removeClass('hidden')
+})
+
+const $hideCircle = $('#hide-circle')
+$hideCircle.on('click', () => {
+    $circleMenu.addClass('hidden')
+})
