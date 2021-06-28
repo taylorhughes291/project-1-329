@@ -111,7 +111,8 @@ div.overlay {
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: rgba(85, 77, 86, 0.9);
+    background-color: rgb(85, 77, 86);
+    opacity: 0.9;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -333,12 +334,13 @@ footer h3 {
 
     main div#nutshell-cont {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        font-size: 19px;
     }
 
     main div.add-background {
-        background-color: rgba(85, 77, 86, 0.9);
+        background-color: rgba(85, 77, 86);
     }
 
     div.overlay {
@@ -346,7 +348,7 @@ footer h3 {
         top: 0px;
         left: 0px;
         background: none;
-        max-width: 250px;
+        max-width: 400px;
         width: 100%;
         height: 100%;
         z-index: 1;
@@ -355,6 +357,10 @@ footer h3 {
         justify-content: center;
         align-items: center;
       }
+
+    div.overlay p {
+        width: 350px;
+    }
 
     div#nutshell img {
         width: 400px;
@@ -571,6 +577,8 @@ main div.see-more {
 
 
 /* ~~~~~~~~~~~~~ ANIMATIONS ~~~~~~~~~~~~~ */
+
+/* Mobile menu */
 @keyframes mobileMenuAppear {
     0% {
         transform: none;
@@ -599,6 +607,23 @@ header div.animation-in {
 
 header div.animation-out {
     animation-name: mobileMenuDisappear;
+    animation-duration: 1s;
+    animation-direction: forwards;
+}
+
+/* About me animation */
+@keyframes aboutGradient {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
+
+main div.overlay.add-gradient {
+    animation-name: aboutGradient;
     animation-duration: 1s;
     animation-direction: forwards;
 }

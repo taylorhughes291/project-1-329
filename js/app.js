@@ -274,26 +274,6 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
           alert("Thanks for your email!")
         
     })
-
-    //////////////////////////////
-    // Now to add links to my icons at the bottom
-    //////////////////////////////
-
-    const $fbIcon = $('footer div.icons i.fa-facebook-square')
-
-
-    $fbIcon.on("click", () => {
-        alert("Don't use Facebook!")
-    })
-    const $fbIconSmall = $('footer div.icons-small i.fa-facebook-square')
-
-
-    $fbIconSmall.on("click", () => {
-        alert("Don't use Facebook!")
-    })
-
-
-
 })
 .catch((error) => {
     console.log(error);
@@ -307,6 +287,7 @@ const $nutshellCont = $('#nutshell-cont')
 
 $aboutButton.on("click", () => {
     $overlay.removeClass("hidden")
+    $overlay.addClass('add-gradient')
     $nutshellCont.addClass("add-background")
 })
 
@@ -338,3 +319,4 @@ $hideCircle.on('click', () => {
     $circleMenu.removeClass('animation-in')
     // $circleMenu.addClass('hidden')
 })
+
