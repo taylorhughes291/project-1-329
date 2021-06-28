@@ -301,7 +301,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
 
 // This code will hide and show the about me overlay over my picture
 const $overlay = $('.overlay')
-const $aboutButton = $('#about-button')
+const $aboutButton = $('.about-button')
 const $hideButton = $('#hide-button')
 const $nutshellCont = $('#nutshell-cont')
 
