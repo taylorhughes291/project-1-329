@@ -136,9 +136,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
             category = "software"
 
             // Let's check again on the remainder of software projects
-            if (softwareRemainder.length > 0) {
-                $seeMore.toggleClass("hidden");
-            }
+            more(softwareRemainder)
         }
     })
 
@@ -158,9 +156,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
             category = "photo"
 
             // Let's check again on the remainder of software projects
-            if (photoRemainder.length > 0) {
-                $seeMore.toggleClass("hidden");
-            }
+            more(photoRemainder)
         }
     })
 
@@ -180,9 +176,7 @@ $.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4I
             category = "outdoors"
 
             // Let's check again on the remainder of software projects
-            if (outdoorRemainder.length > 0) {
-                $seeMore.toggleClass("hidden");
-            }
+            more(outdoorRemainder)
         }
     })
 
