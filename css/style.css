@@ -252,18 +252,11 @@ footer div.logo {
 
 }
 
-footer div.icons-small {
+footer div.icons {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 75px;
-    margin-right: 15px;
-}
-footer div.icons {
-    display: none;
-    justify-content: space-around;
-    align-items: center;
-    width: 75px;
+    width: 150px;
     margin-right: 15px;
 }
 
@@ -470,7 +463,6 @@ footer h3 {
     footer div.icons {
         display: flex;
         padding: 0 0 10px;
-        width: 200px;
     }
 }
 
