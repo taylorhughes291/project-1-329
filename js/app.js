@@ -2,20 +2,18 @@
 // Get Data from Google Sheets
 ///////////////////////////
 
-$.ajax('https://spreadsheets.google.com/feeds/list/1oVPq9iIy7lclUAgZLIBaJSXGHU4IIpGdERTxXm4l7vk/1/public/full?alt=json')
+$.ajax('https://sheets.googleapis.com/v4/spreadsheets/1oVPq9iIy7lclUAgZLIBaJSXGHU4IIpGdERTxXm4l7vk/values/Sheet1?alt=json&key=AIzaSyAleyzwtA_THyMjT5aallc0Mw4UzpDtJ0A')
 .then((data) => {
-
     // map over the data, generate a simpler data set
-    const projects = data.feed.entry.map((item) => {
+    const projects = data.values.map((item) => {
         return {
-            project: item.gsx$project.$t,
-            description: item.gsx$description.$t,
-            image: item.gsx$image.$t,
-            liveurl: item.gsx$liveurl.$t,
-            giturl: item.gsx$giturl.$t,
-            category: item.gsx$category.$t,
-            details: item.gsx$details.$t,
-            tools: item.gsx$details.$t
+            project: item[0],
+            description: item[4],
+            image: item[3],
+            liveurl: item[1],
+            giturl: item[2],
+            category: item[5],
+            details: item[6]
         }
     })
 
